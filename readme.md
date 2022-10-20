@@ -8,19 +8,24 @@ Everyone needs a place to write about their favorite albums! That's why in this 
 
 ## Objectives
 
-Create a professional-looking, full-stack application with functioning front and back end. Using primarily Mongoose, , Express, React, and Javascript you will create a custom API on the backend and active React forms on the front end. The application should have full CRUD operations.
+Create a professional-looking, full-stack application with functioning front and back end. Using primarily Mongoose, Express, React, and Javascript you will create a custom API on the backend and active React forms on the front end. The application should have full CRUD operations.
 
 ## Instructions
 
 Get started:
+
+```js
 -start mongo server
 -start a mongo shell
 -npm init -y
 -npm install mongoose
 -mkdir db models seed
 -touch db/index.js models/album.js seed/albums.js
+```
 
 Next Steps:
+
+```js
 -Establish a Database connection
 -Establish schemas for what for album reviews will look like
 -Install and deploy Express and Nodemon:
@@ -32,12 +37,13 @@ Next Steps:
 -Employ React forms
 -Make sure React forms are working and the objects are being updated via CRUD
 -Add albums reviews to your hearts content
+```
 
 ## Componenet Diagram
 
 Front End:
 
-![classic rock](https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/311726491_649407699968283_1250257656647189629_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=0llaQSDIqgIAX-6RjBv&_nc_ht=scontent-iad3-2.xx&oh=00_AT95Q7Ce_jmCNHyfoM-nd9XbzaZCkTbQzB0MlQY7JWDkOw&oe=6355209A)
+![Front End](https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/312446668_649893826586337_972422687759052523_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=y5ihlP3X0tYAX-JvMwr&_nc_oc=AQmlhfjGB-7SNGRHDsjdxFjSFESFSkrtJuCN2p3goe8A07wM1e5EdOy4yfGLGnZcZNw&_nc_ht=scontent-iad3-2.xx&oh=00_AT94Qd1pdBkoZn-pNAixFEYnveCR8MrpoiCn6uZQlWPSYg&oe=6356892E)
 
 ## Links
 
