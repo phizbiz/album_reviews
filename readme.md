@@ -36,4 +36,9 @@ Next Steps:
 ## Componenet Diagram
 
 Front End:
+
 ![classic rock](https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/311726491_649407699968283_1250257656647189629_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=0llaQSDIqgIAX-6RjBv&_nc_ht=scontent-iad3-2.xx&oh=00_AT95Q7Ce_jmCNHyfoM-nd9XbzaZCkTbQzB0MlQY7JWDkOw&oe=6355209A)
+
+## Links
+
+Trello Board: [trello](https://trello.com/invite/b/Zu7YgMWS/ATTI6baca54cff624b0c267264a07a8243604C7E94C8/album-review-project)
