@@ -1,0 +1,23 @@
+{
+  "name": "album_reviews",
+  "version": "1.0.0",
+  "description": "![classic rock](https://cdn.mos.cms.futurecdn.net/j28xyTnvBtcPwPW52evvzf.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phizbiz/album_reviews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phizbiz/album_reviews/issues"
+  },
+  "homepage": "https://github.com/phizbiz/album_reviews#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
