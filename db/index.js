@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
+// below could be placed in server.js
+require('dotenv').config()
 
 mongoose
-  .connect(
-    'mongodb+srv://phizbiz:reynard4@generalassemblycluster.oten2h7.mongodb.net/albumReviewDatabase'
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
