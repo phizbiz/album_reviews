@@ -4,7 +4,7 @@ const albumSchema = new Schema(
   {
     name: { type: String, required: true },
     artist: { type: String, required: true },
-    rating: { type: Number, required: true }
+    label: { type: String, required: true }
   },
   { timestamps: true }
 )
