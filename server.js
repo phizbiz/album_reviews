@@ -1,7 +1,7 @@
 const express = require('express')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
-const { Album } = require('./models')
+const { Album, Review } = require('./models')
 
 const app = express()
 
@@ -14,9 +14,33 @@ app.get('/', (req, res) => {
 
 //Album Routes
 
-// create album
-app.post('/albums', (req, res) => {
-  res.send(req.body)
+//read all albums -- GET
+app.get('/albums', async (req, res) => {
+  let allAlbums = await Album.find({})
+  res.json(allAlbums)
+})
+
+// create album -- POST
+app.post('/albums', async (req, res) => {
+  let createdAlbum = await Album.create(req.body)
+  res.json(createdAlbum)
+})
+
+//Reviews
+
+// get all reviews --> GET
+app.get('/reviews', async (req, res) => {
+  const allReviews = await Review.find({})
+  res.json(allReviews)
+})
+
+// create a review --> POST
+app.post('/reviews', async (req, res) => {
+  let exampleAlbumId = '6352e02aceebef3dbbbbc897'
+  const requestBody = { ...req.body, album: exampleAlbumId }
+
+  let createdReview = await Review.create(requestBody)
+  res.json(createdReview)
 })
 
 app.listen(PORT, () => {
