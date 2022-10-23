@@ -4,6 +4,7 @@ import axios from 'axios'
 function App() {
   const [reviews, updateReviews] = useState([])
   const [formState, setFormState] = useState({ name: '', body: '', stars: '' })
+  // const [albums, updateAlbums] = useState([])
 
   useEffect(() => {
     const apiCall = async () => {
@@ -35,11 +36,20 @@ function App() {
   return (
     <div className="App">
       <h1>All Album Reviews Here</h1>
-      {reviews.map((review) => (
-        <div key={review._id}>
-          <h1>{review.name}</h1>
-        </div>
-      ))}
+      <div>
+        <h1>Hotel California</h1>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
+          alt="Hotel California"
+        />
+        {reviews.map((review) => (
+          <div key={review._id}>
+            <h3>User: {review.name}</h3>
+            <h3>Review: {review.body}</h3>
+            <h3>Stars: {review.stars}</h3>
+          </div>
+        ))}
+      </div>
 
       <h3>Write your review!</h3>
       <form onSubmit={handleSubmit}>
