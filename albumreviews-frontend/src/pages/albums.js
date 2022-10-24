@@ -41,24 +41,8 @@ function Albums() {
 
   return (
     <div className="Albums">
-      <h1>ALBUMS PAGE TEST</h1>
-      <div>
-        <h1>Hotel California</h1>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
-          alt="Hotel California"
-        />
-        {albums.map((album) => (
-          <div key={album._id}>
-            <h3>Name: {album.name}</h3>
-            <h3>Artist: {album.artist}</h3>
-            <h3>Label: {album.label}</h3>
-            <h3>Art: {album.art}</h3>
-          </div>
-        ))}
-      </div>
-
-      <h3>Add An Album</h3>
+      <h1>Phizfork</h1>
+      <h2>Add An Album</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input id="name" value={formState.name} onChange={handleChange} />
@@ -70,6 +54,24 @@ function Albums() {
         <input id="art" value={formState.art} onChange={handleChange} />
         <button type="submit">Add Album</button>
       </form>
+      <h1>Album Reviews...</h1>
+      <div>
+        {/* <h1>Hotel California</h1>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
+          alt="Hotel California"
+        /> */}
+        {albums.map((album) => (
+          <div key={album._id}>
+            <h3>
+              <img src={album.art} />
+            </h3>
+            <h3>Name: {album.name}</h3>
+            <h3>Artist: {album.artist}</h3>
+            <h3>Label: {album.label}</h3>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

@@ -28,6 +28,18 @@ app.post('/albums', async (req, res) => {
   res.json(createdAlbum)
 })
 
+// delete album -- DELETE
+app.delete('/albums', async (req, res) => {
+  let deletedAlbum = await Album.deleteOne(req.body)
+  res.json(deletedAlbum)
+})
+
+// update album -- PUT
+app.put('/albums', async (req, res) => {
+  let updatedAlbum = await Album.updateOne(req.body)
+  res.json(updatedAlbum)
+})
+
 //Reviews
 
 // get all reviews --> GET

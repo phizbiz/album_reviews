@@ -7,36 +7,36 @@ import Reviews from './pages/reviews'
 import { Link } from 'react-router-dom'
 
 function App() {
-  const [reviews, updateReviews] = useState([])
-  const [formState, setFormState] = useState({ name: '', body: '', stars: '' })
-  // const [albums, updateAlbums] = useState([])
+  // const [reviews, updateReviews] = useState([])
+  // const [formState, setFormState] = useState({ name: '', body: '', stars: '' })
+  // // const [albums, updateAlbums] = useState([])
 
-  useEffect(() => {
-    const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/reviews')
-      updateReviews(response.data)
-    }
-    apiCall()
-  }, [])
+  // useEffect(() => {
+  //   const apiCall = async () => {
+  //     let response = await axios.get('http://localhost:3001/reviews')
+  //     updateReviews(response.data)
+  //   }
+  //   apiCall()
+  // }, [])
 
-  const handleChange = (event) => {
-    setFormState({ ...formState, [event.target.id]: event.target.value })
-  }
+  // const handleChange = (event) => {
+  //   setFormState({ ...formState, [event.target.id]: event.target.value })
+  // }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    console.log(formState)
-    let newReview = await axios
-      .post('http://localhost:3001/reviews', formState)
-      .then((response) => {
-        return response
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    updateReviews([...reviews, newReview.data])
-    setFormState({ name: '', body: '', stars: '' })
-  }
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault()
+  //   console.log(formState)
+  //   let newReview = await axios
+  //     .post('http://localhost:3001/reviews', formState)
+  //     .then((response) => {
+  //       return response
+  //     })
+  //     .catch((error) => {
+  //       console.log(error)
+  //     })
+  //   updateReviews([...reviews, newReview.data])
+  //   setFormState({ name: '', body: '', stars: '' })
+  // }
 
   return (
     <div className="App">
@@ -47,11 +47,15 @@ function App() {
         </Routes>
         <div>
           <Link to="/albums">Albums</Link>
+          <br></br>
           <Link to="/reviews">Reviews</Link>
         </div>
       </div>
-      <h1>All Album Reviews Here</h1>
+      {/* <h1>All Album Reviews Here</h1> */}
       <div>
+        <Albums />
+      </div>
+      {/* <div>
         <h1>Hotel California</h1>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
@@ -74,7 +78,7 @@ function App() {
             <h3>Stars: {review.stars}</h3>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
