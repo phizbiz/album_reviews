@@ -1,5 +1,8 @@
+import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+// import { Route, Routes, useNavigate } from 'react-router-dom'
+import Albums from './pages/albums'
 
 function App() {
   const [reviews, updateReviews] = useState([])
@@ -35,6 +38,13 @@ function App() {
 
   return (
     <div className="App">
+      {/* <div>
+        <header>
+          <Routes>
+            <Route path="/albums" element={<Albums />} />
+          </Routes>
+        </header>
+      </div> */}
       <h1>All Album Reviews Here</h1>
       <div>
         <h1>Hotel California</h1>
