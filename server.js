@@ -22,6 +22,11 @@ app.get('/albums', async (req, res) => {
   res.json(allAlbums)
 })
 
+app.get('/albums', async (req, res) => {
+  let oneAlbum = await Album.findOne({})
+  res.json(oneAlbum)
+})
+
 // create album -- POST
 app.post('/albums', async (req, res) => {
   let createdAlbum = await Album.create(req.body)

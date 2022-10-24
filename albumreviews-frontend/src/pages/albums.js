@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import link from 'react-router-dom'
+import Reviews from './reviews'
 
 function Albums() {
   const [albums, updateAlbums] = useState([])
@@ -56,11 +57,6 @@ function Albums() {
       </form>
       <h1>Album Reviews...</h1>
       <div>
-        {/* <h1>Hotel California</h1>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
-          alt="Hotel California"
-        /> */}
         {albums.map((album) => (
           <div key={album._id}>
             <h3>
@@ -69,6 +65,11 @@ function Albums() {
             <h3>Name: {album.name}</h3>
             <h3>Artist: {album.artist}</h3>
             <h3>Label: {album.label}</h3>
+            <h3>
+              {' '}
+              Leave a review!
+              <Reviews />
+            </h3>
           </div>
         ))}
       </div>

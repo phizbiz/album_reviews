@@ -39,25 +39,12 @@ function Reviews() {
 
   return (
     <div className="Reviews">
-      {/* <div>
-        <header>
-          <Routes>
-            <Route path="/albums" element={<Albums />} />
-          </Routes>
-        </header>
-      </div> */}
-      <h1>All Album Reviews Here</h1>
       <div>
-        <h1>Hotel California</h1>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
-          alt="Hotel California"
-        />
         {reviews.map((review) => (
           <div key={review._id}>
-            <h3>User: {review.name}</h3>
-            <h3>Review: {review.body}</h3>
-            <h3>Stars: {review.stars}</h3>
+            <h4>User: {review.name}</h4>
+            <h5>Review: {review.body}</h5>
+            <h5>Stars: {review.stars}</h5>
           </div>
         ))}
       </div>
