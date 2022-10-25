@@ -62,6 +62,17 @@ app.post('/reviews', async (req, res) => {
   res.json(createdReview)
 })
 
+// delete a review -->
+app.delete('/reviews', async (req, res) => {
+  let deletedReview = await Review.deleteOne(req.body)
+  res.json(deletedReview)
+})
+
+app.delete('/reviews/all', async (req, res) => {
+  let deletedAllReviews = await Review.deleteMany(req.body)
+  res.json(deletedAllReviews)
+})
+
 app.listen(PORT, () => {
   console.log(`Express server listening on port: ${PORT}`)
 })

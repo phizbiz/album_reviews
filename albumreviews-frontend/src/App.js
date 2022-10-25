@@ -1,3 +1,4 @@
+// import './src/App.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -9,7 +10,7 @@ import { Link } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <div>
+      <div className="Routes">
         <Routes>
           <Route path="/albums" element={<Albums />} />
           <Route path="/reviews" element={<Reviews />} />
@@ -21,7 +22,7 @@ function App() {
         </div>
       </div>
       {/* <h1>All Album Reviews Here</h1> */}
-      <div>
+      <div className="AlbumGrid">
         <Albums />
       </div>
     </div>
