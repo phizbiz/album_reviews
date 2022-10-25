@@ -62,12 +62,13 @@ app.post('/reviews', async (req, res) => {
   res.json(createdReview)
 })
 
-// delete a review -->
+// delete a review --> DELETE
 app.delete('/reviews', async (req, res) => {
   let deletedReview = await Review.deleteOne(req.body)
   res.json(deletedReview)
 })
 
+// delete all reviews --> DELETE
 app.delete('/reviews/all', async (req, res) => {
   let deletedAllReviews = await Review.deleteMany(req.body)
   res.json(deletedAllReviews)

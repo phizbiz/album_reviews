@@ -49,7 +49,9 @@ function Reviews() {
         ))}
       </div>
 
-      <h3>Write your review!</h3>
+      <h4>
+        <i>Write Your Review!</i>
+      </h4>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input id="name" value={formState.name} onChange={handleChange} />

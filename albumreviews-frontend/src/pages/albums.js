@@ -40,20 +40,20 @@ function Albums() {
     setFormState({ name: '', artist: '', label: '', art: '' })
   }
 
-  const handleDelete = async (event) => {
-    event.preventDefault()
-    console.log('Delete button firing!')
-    let deleteAlbum = await axios
-      .deleteOne('http://localhost:3001/albums', formState)
-      .then((response) => {
-        return response
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    updateAlbums([...albums, deleteAlbum.data])
-    setFormState({ name: '', artist: '', label: '', art: '' })
-  }
+  // const handleDelete = async (event) => {
+  //   event.preventDefault()
+  //   console.log('Delete button firing!')
+  //   let deleteAlbum = await axios
+  //     .deleteOne('http://localhost:3001/albums', formState)
+  //     .then((response) => {
+  //       return response
+  //     })
+  //     .catch((error) => {
+  //       console.log(error)
+  //     })
+  //   updateAlbums([...albums, deleteAlbum.data])
+  //   setFormState({ name: '', artist: '', label: '', art: '' })
+  // }
 
   return (
     <div className="Albums">
@@ -75,17 +75,18 @@ function Albums() {
         {albums.map((album) => (
           <div key={album._id}>
             <h3>
-              <img src={album.art} />
+              <img src={album.art} style={{ maxWidth: '200px' }} />
             </h3>
             <h2>Album: {album.name}</h2>
-            <h3>Artist: {album.artist}</h3>
-            <h3>Label: {album.label}</h3>
             <h3>
-              {' '}
-              Leave a review!
+              Artist: {album.artist}, Label: {album.label}
+            </h3>
+
+            <h3>
+              <i>Write your review for {album.name}</i>
               <Reviews />
             </h3>
-            <button onClick={handleDelete}>Delete</button>
+            {/* <button onClick={handleDelete}>Delete</button> */}
           </div>
         ))}
       </div>
