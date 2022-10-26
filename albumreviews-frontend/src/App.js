@@ -12,7 +12,7 @@ import DeleteAlbum from './pages/deletealbum'
 import Home from './pages/home'
 import UpdateAlbum from './pages/updatealbum'
 
-function App() {
+const App = () => {
   return (
     <div
       className="App"
