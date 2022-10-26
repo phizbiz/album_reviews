@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import AlbumDetails from './pages/AlbumDetails'
 import DeleteAlbum from './pages/deletealbum'
 import Home from './pages/home'
+import UpdateAlbum from './pages/updatealbum'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         style={{
           textAlign: 'center',
           // display: 'inline-block',
-          backgroundColor: 'tan'
+          backgroundColor: 'tan',
+          margin: 'auto'
         }}
       >
         <ul
@@ -41,9 +43,10 @@ function App() {
 
           {/* <Link to="/reviews">Reviews</Link> */}
 
-          {/* <Link to="/albums/:id">Album Details // </Link> */}
+          {/* <Link to="/AlbumDetails">Album Details // </Link> */}
 
           <Link to="/deleteAlbum">Delete Album // </Link>
+          <Link to="/updatealbum">Update Album //</Link>
         </ul>
       </div>
       <div className="Routes">
@@ -53,6 +56,7 @@ function App() {
           <Route exact path="/reviews" element={<Reviews />} />
           {/* <Route exact path="/AlbumDetails" element={<AlbumDetails />} /> */}
           <Route exact path="/deletealbum" element={<DeleteAlbum />} />
+          <Route exact path="/updatealbum" element={<UpdateAlbum />} />
         </Routes>
       </div>
       {/* <h1>All Album Reviews Here</h1> */}

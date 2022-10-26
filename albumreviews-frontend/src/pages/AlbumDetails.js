@@ -1,8 +1,6 @@
-// import { useEffect, useState } from 'react'
-// import { useParams } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
-// import { Album } from '../../../models'
-// import db from '../../../db'
+import { React, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // const AlbumDetails = (props) => {
 //   const [album, setAlbum] = useState('')
@@ -26,8 +24,10 @@
 
 const AlbumDetails = () => {
   return (
-    <div>
-      <h1>ALBUM DETAILS PAGE COMING</h1>
+    <div className="AlbumDetails">
+      <div>
+        <h1>ALBUM DETAILS PAGE COMING</h1>
+      </div>
     </div>
   )
 }

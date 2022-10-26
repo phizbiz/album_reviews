@@ -34,14 +34,16 @@ app.post('/albums', async (req, res) => {
 })
 
 // delete album -- DELETE
-app.delete('/albums', async (req, res) => {
-  let deletedAlbum = await Album.deleteOne(req.body)
+app.delete('/albums/:id', async (req, res) => {
+  let deletedAlbum = await Album.findByIdAndDelete(req.params.id)
   res.json(deletedAlbum)
 })
 
 // update album -- PUT
-app.put('/albums', async (req, res) => {
-  let updatedAlbum = await Album.updateOne(req.body)
+app.put('/albums/:id', async (req, res) => {
+  let updatedAlbum = await Album.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
   res.json(updatedAlbum)
 })
 

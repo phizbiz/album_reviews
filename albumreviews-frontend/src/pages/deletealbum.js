@@ -5,7 +5,7 @@ import link from 'react-router-dom'
 import Albums from './albums'
 // import Reviews from './reviews'
 
-function DeleteAlbum() {
+const DeleteAlbum = () => {
   const [albums, updateAlbums] = useState([])
   const [formState, setFormState] = useState({
     name: '',
@@ -21,32 +21,18 @@ function DeleteAlbum() {
       updateAlbums(response.data)
     }
     apiCall()
-  }, [])
+  }, [albums])
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault()
-  //   console.log(formState)
-  //   let newAlbum = await axios
-  //     .post('http://localhost:3001/albums', formState)
-  //     .then((response) => {
-  //       return response
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  //   updateAlbums([...albums, newAlbum.data])
-  //   setFormState({ name: '', artist: '', label: '', art: '' })
-  // }
-
-  const handleDelete = async (event) => {
+  const handleDelete = async (event, id) => {
     event.preventDefault()
     console.log('Delete button firing!')
+    console.log(id)
     let deleteAlbum = await axios
-      .delete('http://localhost:3001/albums', formState)
+      .delete(`http://localhost:3001/albums/${id}`)
       .then((response) => {
         return response
       })
@@ -64,26 +50,30 @@ function DeleteAlbum() {
       <h4>
         <i>We're all just dust in the wind</i>
       </h4>
-      <form onSubmit={handleDelete}>
-        <label htmlFor="name">Name:</label>
-        <input id="name" value={formState.name} onChange={handleChange} />
-        <label htmlFor="artist">Artist:</label>
-        <input id="artist" value={formState.artist} onChange={handleChange} />
-        <label htmlFor="label">Label:</label>
-        <input id="label" value={formState.label} onChange={handleChange} />
-        <button type="submit">Delete Album</button>
-      </form>
       <div style={{ textAlign: 'center' }}>
         <br></br>
         <b>Album List...</b>
+
         {albums.map((album) => (
           <div key={album._id}>
+            <img src={album.art} style={{ maxHeight: '150px' }}></img>
             <h5>
-              Album: {album.name}, {album.artist}, {album.label}
+              Album:{' '}
+              <i>
+                {album.name}, {album.artist}, {album.label}
+              </i>
             </h5>
+            <button
+              onClick={(event) => {
+                handleDelete(event, album._id)
+              }}
+            >
+              Delete
+            </button>
           </div>
         ))}
       </div>
+      <br></br>
     </div>
   )
 }
