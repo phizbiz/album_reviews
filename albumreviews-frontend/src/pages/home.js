@@ -32,16 +32,9 @@ const Home = () => {
         <h3>
           <i>Your one stop shop for music reviews.</i>
         </h3>
-        <div
-          style={{
-            margin: '5px',
-            float: 'unset',
-            alignContent: 'stretch',
-            flexWrap: 'wrap'
-          }}
-        >
+        <div>
           {albums.map((album) => (
-            <div key={album._id} style={{ flexWrap: 'wrap' }}>
+            <div className="AlbumGrid" key={album._id}>
               <img
                 src={album.art}
                 style={{
@@ -55,7 +48,6 @@ const Home = () => {
 
                   gridRow: 'auto',
                   margin: '0px 0px 50px 15px'
-                  // justifyContent: 'space-evenly',
                 }}
               ></img>
             </div>

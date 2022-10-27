@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.AlbumGrid {
+  display: flex;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-shrink: 3;
+  align-items: center;
+  justify-content: center;
+}
 
 .NavBar {
   display: inline;
