@@ -1,6 +1,5 @@
-// import './src/App.css'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Component } from 'react'
 import axios from 'axios'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 // import { BrowserRouter as Switch } from 'react-router-dom'
@@ -11,19 +10,17 @@ import AlbumDetails from './pages/AlbumDetails'
 import DeleteAlbum from './pages/deletealbum'
 import Home from './pages/home'
 import UpdateAlbum from './pages/updatealbum'
+import './styles/App.css'
 
 const App = () => {
   return (
-    <div
-      className="App"
-      style={{ textAlign: 'center', backgroundColor: 'white' }}
-    >
+    <div className="App" style={{ textAlign: 'center' }}>
       <div
         className="NavBar"
         style={{
           textAlign: 'center',
           // display: 'inline-block',
-          backgroundColor: 'tan',
+
           margin: 'auto'
         }}
       >
