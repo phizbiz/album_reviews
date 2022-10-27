@@ -1,14 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-// import { Route, Routes, useNavigate } from 'react-router-dom'
-// import Albums from './pages/albums'
 import link from 'react-router-dom'
 
 function Reviews() {
   const [reviews, updateReviews] = useState([])
   const [formState, setFormState] = useState({ name: '', body: '', stars: '' })
-  // const [albums, updateAlbums] = useState([])
 
   useEffect(() => {
     const apiCall = async () => {
