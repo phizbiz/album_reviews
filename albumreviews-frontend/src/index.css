@@ -46,3 +46,7 @@ form {
   display: block;
   font-weight: bold;
 }
+
+img {
+  margin: 10px 0px 0px 0px;
+}
