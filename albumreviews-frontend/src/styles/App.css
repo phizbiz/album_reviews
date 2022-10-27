@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font: 'copperplate';
 
 }
 
@@ -8,12 +7,3 @@
   display: inline;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-
-
-
-/* .Routes {
-  position: fixed;
-  top: 0;
-  left: 0;
-} */

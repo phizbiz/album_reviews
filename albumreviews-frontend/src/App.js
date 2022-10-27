@@ -14,34 +14,11 @@ import './styles/App.css'
 
 const App = () => {
   return (
-    <div className="App" style={{ textAlign: 'center' }}>
-      <div
-        className="NavBar"
-        style={{
-          textAlign: 'center',
-          // display: 'inline-block',
-
-          margin: 'auto'
-        }}
-      >
-        <ul
-          style={
-            {
-              // backgroundColor: 'tan',
-              // textAlign: 'center',
-              // display: 'inline-block',
-              // width: 'auto',
-              // WebkitTextEmphasisColor: 'white'
-            }
-          }
-        >
+    <div className="App">
+      <div className="NavBar">
+        <ul>
           <Link to="/">// Home // </Link>
           <Link to="/albums">Albums // </Link>
-
-          {/* <Link to="/reviews">Reviews</Link> */}
-
-          {/* <Link to="/AlbumDetails">Album Details // </Link> */}
-
           <Link to="/deleteAlbum">Delete Album // </Link>
           <Link to="/updatealbum">Update Album //</Link>
         </ul>
@@ -51,13 +28,12 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/albums" element={<Albums />} />
           <Route exact path="/reviews" element={<Reviews />} />
-          {/* <Route exact path="/AlbumDetails" element={<AlbumDetails />} /> */}
           <Route exact path="/deletealbum" element={<DeleteAlbum />} />
           <Route exact path="/updatealbum" element={<UpdateAlbum />} />
         </Routes>
       </div>
-      {/* <h1>All Album Reviews Here</h1> */}
-      <div className="AlbumGrid">{/* <Albums /> */}</div>
+
+      <div className="AlbumGrid"></div>
     </div>
   )
 }
