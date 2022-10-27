@@ -9,7 +9,7 @@ const app = express()
 //middleware
 app.use(express.json())
 app.use(cors())
-app.use(express.static(`${__dirname}/client/build`))
+app.use(express.static(`${__dirname}/albumreviews-frontend/build`))
 
 app.get('/', (req, res) => {
   res.send({ msg: 'This route is being hit' })
@@ -75,6 +75,10 @@ app.delete('/reviews', async (req, res) => {
 app.delete('/reviews/all', async (req, res) => {
   let deletedAllReviews = await Review.deleteMany(req.body)
   res.json(deletedAllReviews)
+})
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/albumreviews-frontend/build/index.html`)
 })
 
 app.listen(PORT, () => {
