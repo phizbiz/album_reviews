@@ -68,10 +68,11 @@ function Albums() {
             </h3>
 
             <h3>
+              <br></br>
               <i>Write your review for {album.name}</i>
+              <br></br>
               <Reviews />
             </h3>
-            {/* <button onClick={handleDelete}>Delete</button> */}
           </div>
         ))}
       </div>

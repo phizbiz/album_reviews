@@ -30,7 +30,7 @@ const Home = () => {
           alt="logo"
         />
         <h3>
-          <i>Your one stop shop for music reviews.</i>
+          <i>Your one-stop shop for music reviews!</i>
         </h3>
         <div>
           {albums.map((album) => (
