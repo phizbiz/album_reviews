@@ -40,21 +40,6 @@ function Albums() {
     setFormState({ name: '', artist: '', label: '', art: '' })
   }
 
-  // const handleDelete = async (event) => {
-  //   event.preventDefault()
-  //   console.log('Delete button firing!')
-  //   let deleteAlbum = await axios
-  //     .deleteOne('http://localhost:3001/albums', formState)
-  //     .then((response) => {
-  //       return response
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  //   updateAlbums([...albums, deleteAlbum.data])
-  //   setFormState({ name: '', artist: '', label: '', art: '' })
-  // }
-
   return (
     <div className="Albums">
       <h1>Phizfork</h1>

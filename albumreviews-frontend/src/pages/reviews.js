@@ -24,7 +24,6 @@ function Reviews() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
     let newReview = await axios
       .post('http://localhost:3001/reviews', formState)
       .then((response) => {
