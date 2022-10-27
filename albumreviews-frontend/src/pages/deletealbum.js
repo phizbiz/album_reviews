@@ -48,7 +48,7 @@ const DeleteAlbum = () => {
       <h1>Phizfork Delete</h1>
       <h2>Delete An Album</h2>
       <h4>
-        <i>We're all just dust in the wind</i>
+        <i>"We're all just dust in the wind"</i>
       </h4>
       <div style={{ textAlign: 'center' }}>
         <br></br>
