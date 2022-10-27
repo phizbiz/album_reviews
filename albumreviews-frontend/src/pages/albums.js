@@ -11,7 +11,6 @@ function Albums() {
     label: '',
     art: ''
   })
-  // const [albums, updateAlbums] = useState([])
 
   useEffect(() => {
     const apiCall = async () => {
