@@ -19,7 +19,8 @@ code {
   flex-shrink: 3;
   align-items: center;
   justify-content: center;
-  
+  margin: 0px 0px 50px 55px;
+  maWidth: 150px;
 }
 
 .NavBar {

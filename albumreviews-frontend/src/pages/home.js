@@ -39,15 +39,8 @@ const Home = () => {
                 src={album.art}
                 style={{
                   maxWidth: '150px',
-                  // display: 'inline-block',
                   border: '1px solid #ccc',
-                  padding: '5px',
-                  textAlign: 'center',
-                  style: 'float',
-                  display: '-ms-grid',
-
-                  gridRow: 'auto',
-                  margin: '0px 0px 50px 15px'
+                  padding: '5px'
                 }}
               ></img>
             </div>
