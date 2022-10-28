@@ -6,10 +6,9 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import Albums from './pages/albums'
 import Reviews from './pages/reviews'
 import { Link } from 'react-router-dom'
-import AlbumDetails from './pages/AlbumDetails'
-import DeleteAlbum from './pages/deletealbum'
+import DeleteAlbum from './pages/deleteAlbum'
 import Home from './pages/home'
-import UpdateAlbum from './pages/updatealbum'
+import UpdateAlbum from './pages/updateAlbum'
 import './styles/App.css'
 
 const App = () => {
@@ -28,7 +27,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/albums" element={<Albums />} />
           <Route exact path="/reviews" element={<Reviews />} />
-          <Route exact path="/deletealbum" element={<DeleteAlbum />} />
+          <Route exact path="/deleteAlbum" element={<DeleteAlbum />} />
           <Route exact path="/updatealbum" element={<UpdateAlbum />} />
         </Routes>
       </div>
