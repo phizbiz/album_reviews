@@ -12,7 +12,6 @@ const DeleteAlbum = () => {
     label: '',
     art: ''
   })
-  // const [albums, updateAlbums] = useState([])
 
   useEffect(() => {
     const apiCall = async () => {
