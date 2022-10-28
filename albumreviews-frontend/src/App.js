@@ -7,7 +7,7 @@ import Reviews from './pages/reviews'
 import { Link } from 'react-router-dom'
 import DeleteAlbum from './pages/deletealbum'
 import Home from './pages/home'
-import UpdateAlbum from './pages/updateAlbum'
+import UpdateAlbum from './pages/updatealbum'
 import './styles/App.css'
 
 const App = () => {
