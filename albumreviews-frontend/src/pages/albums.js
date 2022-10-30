@@ -3,7 +3,7 @@ import axios from 'axios'
 import link from 'react-router-dom'
 import Reviews from './reviews'
 
-function Albums() {
+const Albums = () => {
   const [albums, updateAlbums] = useState([])
   const [formState, setFormState] = useState({
     name: '',
