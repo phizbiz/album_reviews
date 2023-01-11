@@ -5,6 +5,7 @@ import Reviews from './reviews'
 
 const Albums = () => {
   const [albums, updateAlbums] = useState([])
+  const [tags, updateTags] = useState([])
   const [formState, setFormState] = useState({
     name: '',
     artist: '',
